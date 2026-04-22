@@ -13,12 +13,15 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
+    @Column(name = "post_id")
     private Long postId;
     
+    @Column(name = "author_id")
     private Long authorId;
     
     private String content;
     
+    @Column(name = "depth_level")
     private Integer depthLevel;
     
     private LocalDateTime createdAt;

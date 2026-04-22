@@ -5,14 +5,14 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "users")
-public class User {
+@Table(name = "bots")
+public class Bot {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    private String username;
+    private String name;
     
-    private Boolean isPremium;
+    private String personaDescription;
 }
