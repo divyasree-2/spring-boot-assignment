@@ -1,0 +1,113 @@
+{
+  "info": {
+    "_postman_id": "4bc7e51d-dfb4-496c-baed-28c21ac70690",
+    "name": "Grid07 Assignment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47801310",
+    "_collection_link": "https://go.postman.co/collection/47801310-4bc7e51d-dfb4-496c-baed-28c21ac70690?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create Post",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"authorId\": 1,\r\n    \"content\": \"This is my first post!\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/posts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "posts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Comment",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"authorId\": 1,\r\n    \"content\": \"This is a bot comment!\",\r\n    \"depthLevel\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/posts/1/comments?isBot=true&botId=1&humanId=1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "posts",
+            "1",
+            "comments"
+          ],
+          "query": [
+            {
+              "key": "isBot",
+              "value": "true"
+            },
+            {
+              "key": "botId",
+              "value": "1"
+            },
+            {
+              "key": "humanId",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Like Post",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/posts/1/like?isBot=false",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "posts",
+            "1",
+            "like"
+          ],
+          "query": [
+            {
+              "key": "isBot",
+              "value": "false"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
