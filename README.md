@@ -1,4 +1,4 @@
-# Spring Boot Assignment - Grid07
+# Spring Boot Project - Grid07
 
 ## Tech Stack
 - Java 17
